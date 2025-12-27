@@ -717,7 +717,7 @@
             const geometry = new THREE.BoxGeometry(2, 2.5, 0.05);
             playLyrics(storyData.lyricsRaw);
             for (let i = 0; i < 5; i++) {
-                const imagePath = `${storyData.folder}/${i+1}.png.png`;
+                const imagePath = `${storyData.folder}/${i+1}.png`;
                 const tex = createPhotoPolaroidTexture(imagePath); 
                 const mat = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.6, metalness: 0.0 });
                 const mesh = new THREE.Mesh(geometry, mat); 
