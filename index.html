@@ -328,15 +328,10 @@
             fx: { stormCount: 15, stormSpeedBase: 0.08, stormSpreadRad: 1.57, bloomStrength: 0.309, bloomRadius: 0.352, bloomThreshold: 0.963 }
         };
 
-        // --- CỐT TRUYỆN 3 PHẦN ---
-        const STORY_PART_1 = "Tụi mình bắt đầu bằng việc yêu xa, Ban đầu muốn gặp nhau phát điên, Đêm nhớ nhau chỉ biết call nhau ngủ, Nhớ chả thể ôm, Ngày đó chỉ mong là tụi mình có thể gần nhau hơn xíu";
-        const STORY_PART_2 = "Bin ghét yêu xa và Na cũng vậy, Lần đầu chạy hơn 100km để tìm em, Anh vẫn run khi gặp em, Rồi anh nhận được món quà là một chậu hoa lego, Em thì nhận dc bó hoa anh tự gói";
-        const STORY_PART_3 = "Rồi tụi mình đi PhotoBooth, Về tan ngồi Cf em còn bảo anh đểu cáng k đáng tin, Rồi mình cũng đã yêu nhau được hơn 1 năm, Cảm ơn em vì tất cả, Mãi bên anh em nhé";
-
         const STORIES = [
-            { folder: "chuong1", title: "Yêu Xa", lyricsRaw: STORY_PART_1 },
-            { folder: "chuong2", title: "Gặp Gỡ", lyricsRaw: STORY_PART_2 },
-            { folder: "chuong3", title: "Mãi Yêu", lyricsRaw: STORY_PART_3 }
+          { folder: "chuong1", title: "", lyricsRaw: STORY_PART_1 },
+            { folder: "chuong2", title: "", lyricsRaw: STORY_PART_2 },
+            { folder: "chuong3", title: "Mã", lyricsRaw: STORY_PART_3 }
         ];
 
         const BOOK_WIDTH = 7; 
@@ -722,7 +717,7 @@
             const geometry = new THREE.BoxGeometry(2, 2.5, 0.05);
             playLyrics(storyData.lyricsRaw);
             for (let i = 0; i < 5; i++) {
-                const imagePath = `${storyData.folder}/${i+1}.png`;
+                const imagePath = `${storyData.folder}/${i+1}.png.png`;
                 const tex = createPhotoPolaroidTexture(imagePath); 
                 const mat = new THREE.MeshStandardMaterial({ map: tex, roughness: 0.6, metalness: 0.0 });
                 const mesh = new THREE.Mesh(geometry, mat); 
